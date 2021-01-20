@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
     <title>Ruleta</title>
 </head>
 <body>
-    
+      <div class="modal fade" id="modalCargaOpciones" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cargar opciones</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                  <div class="row">
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="txtOpcion" placeholder="Nombre de la opción">
+                    </div>
+
+                    <div class="col-6">
+                        <a id="btnAgregarOpcion" type="button" style="margin-left: 50%;" class="btn btn-success" onclick="AgregarOpcion()">Success</a>
+                    </div>
+                  </div>
+
+                  <div class="row pt-3">
+                    <div class="col">
+                        <table id="tblOpciones" class="table table-dark table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Opción</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="btnComenzar" type="button" class="btn btn-primary">Comenzar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
+
+<link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+<script src="js/bootstrap/bootstrap.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/funciones.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/r-2.2.5/datatables.min.js"></script>
