@@ -10,25 +10,24 @@
       <div class="modal fade" id="modalCargaOpciones" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header d-flex justify-content-center">
               <h5 class="modal-title" id="exampleModalLabel">Cargar opciones</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="container">
-                  <div class="row">
+                  <div class="row bg-light border p-4">
                     <div class="col-6">
                         <input type="text" class="form-control" id="txtOpcion" placeholder="Nombre de la opción">
                     </div>
 
                     <div class="col-6">
-                        <a id="btnAgregarOpcion" type="button" style="margin-left: 50%;" class="btn btn-success" onclick="AgregarOpcion()">Success</a>
+                        <a id="btnAgregarOpcion" type="button" style="margin-left: 50%;" class="btn btn-success" onclick="AgregarOpcion()">Agregar</a>
                     </div>
                   </div>
 
-                  <div class="row pt-3">
+                  <div class="row bg-light border p-4">
                     <div class="col">
-                        <table id="tblOpciones" class="table table-dark table-hover table-bordered">
+                        <table id="tblOpciones" class="table table-striped">
                             <thead>
                                 <tr>
                                     <th>Opción</th>
@@ -42,16 +41,32 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button id="btnComenzar" type="button" class="btn btn-primary">Comenzar</button>
+              <a id="btnComenzar" type="button" class="btn btn-primary" onclick="llenarOpciones()">Comenzar</a>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="container">
+          <div class="row" style="margin-top: 4%;">
+              <div class="col-12 d-flex justify-content-center">
+                <canvas id="canvas" width="500" height="500"></canvas>
+              </div>
+
+              <div class="col-12 d-flex justify-content-center">
+                <button type="button" class="btn btn-outline-success" style="margin-right: 5px;" value="spin" id='spin'/>Girar</button>
+                <button type="button" class="btn btn-outline-danger" style="margin-left: 5px;" onclick="Volver()"/>Volver</button>
+              </div>
+          </div>
+      </div>
+
+      <div id="myConfirm"></div>
 </body>
 </html>
 
 <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="js/bootstrap/bootstrap.js"></script>
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/funciones.js"></script>
