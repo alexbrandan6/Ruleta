@@ -231,7 +231,7 @@ function stopRotateWheel() {
     var index = Math.floor((360 - degrees % 360) / arcd);
     ctx.save();
     ctx.font = 'bold 30px Helvetica, Arial';
-    var text = options[index]
+    var text = options[index];
     Swal.fire({
             imageUrl: 'https://i.pinimg.com/originals/4c/32/82/4c3282033866e22b7ceab02b84899b2a.gif',
             imageWidth: 300,
@@ -239,7 +239,7 @@ function stopRotateWheel() {
             title: text,
             width: 600,
             padding: '3em',
-            background: '#fff url(/img/confeti.gif)'
+            background: '#fff url(img/confeti.gif)'
             })
     //ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
     ctx.restore();
